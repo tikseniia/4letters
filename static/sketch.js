@@ -12,7 +12,7 @@ let timer;
 const timeWeHave = 15;
 let time = timeWeHave;
 let timeLeft = true;
-let t = "Коллеги,\nдалеко мы так не уедем.\nДавайте-ка соберемся\nи сделаем уже нормально";
+let t = "Ой,\nдалеко мы так не уедем.\nДавай-ка соберемся\nи поговорим уже нормально";
 let c = 'rgb(20, 30, 48)'
 
 let animated = false;
@@ -226,7 +226,7 @@ const saveImg = () => {
       }
     }).done(function(data) {
         animated = false;
-        t = `Ура, мы почти друг друга поняли, совпали: ${join(data['data'], ',')}`;
+        t = `Ура, с каждым днем все ближе друг к другу. Я тоже вижу у тебя это: ${join(data['data'], ',')}`;
         c = 'rgb(113, 178, 128)';
         timeLeft = false;
     });
