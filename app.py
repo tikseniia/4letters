@@ -61,7 +61,7 @@ def nums():
     else:
         nums = ''.join(random.choices(string.digits, k=4))
         session['nums'] = nums
-    color = random.choice(['purple', 'red', 'green', 'blue', 'yellow'])
+    color = random.choice(['purple', 'yellow'])
     return render_template('nums.html', nums=nums, color=color)
 
 
