@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en"><head>
+{#    <script src="/static/p5.js"></script>#}
+    <link rel="stylesheet" type="text/css" href="/static/nums.css">
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+    <div class="runner-body" style="margin: 200px 0;">
+        <div class="runner">
+
+          <div class="col">
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+          </div>
+          {% for l in nums %}
+            {% if l == '0' %}
+              {% include 'numbers/0.html' %}
+            {% elif l == '1' %}
+              {% include 'numbers/1.html' %}
+            {% elif l == '2' %}
+              {% include 'numbers/2.html' %}
+            {% elif l == '3' %}
+              {% include 'numbers/3.html' %}
+            {% elif l == '4' %}
+              {% include 'numbers/4.html' %}
+            {% elif l == '5' %}
+              {% include 'numbers/5.html' %}
+            {% elif l == '6' %}
+              {% include 'numbers/6.html' %}
+            {% elif l == '7' %}
+              {% include 'numbers/7.html' %}
+            {% elif l == '8' %}
+              {% include 'numbers/8.html' %}
+            {% elif l == '9' %}
+              {% include 'numbers/9.html' %}
+            {% endif %}
+          {% endfor %}
+          <div class="col">
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+          </div>
+          <div class="col">
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+          </div>
+        </div>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/static/nums.js"></script>
+  <script>
+      console.log({{ nums }});
+      let nums = {{ nums }};
+      $('.pixel-active').each(function() {
+        {#$(this).removeClass('purple');#}
+        {#$(this).removeClass('red');#}
+        {#$(this).removeClass('green');#}
+        {#$(this).removeClass('blue');#}
+        {#$(this).removeClass('yellow');#}
+
+        $(this).addClass("{{ color }}");
+      })
+
+      setInterval(() => {
+          fetch(`/check`)
+            .then(function (response) {
+                return response.json();
+            })
+              .then(function (data) {
+                  console.log(data["nums"], nums);
+                  if (data["nums"] != nums) {
+                      location.reload();
+                  }
+              })
+            .catch(function (err) {
+              console.log('error: ' + err);
+            });
+      }, 1000);
+  </script>
+
+</body></html>

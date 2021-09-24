@@ -1,0 +1,211 @@
+<!DOCTYPE html5>
+
+<html lang="ru">
+
+<head>
+  <title>{{title}}</title>
+  <meta name="description" content="Создай бегущую строку">
+  <meta property="og:image" content="/static/runner/cover.png">
+  <meta name="viewport" content="maximum-scale=1.0,width=device-width,initial-scale=1.0,user-scalable=0">
+  <link rel="stylesheet" href="/static/runner/style.css">
+  <link rel="shortcut icon" href="/static/runner/cover.png">
+</head>
+
+<body>
+  <div class="runner-body" style="margin: 200px 0;">
+    <div class="runner">
+
+      <div class="col">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+      {% for l in message %}
+        {% if l == 'а' %}
+          {% include 'runner/letters/a.html' %}
+        {% elif l == 'б' %}
+          {% include 'runner/letters/b.html' %}
+        {% elif l == 'в' %}
+          {% include 'runner/letters/v.html' %}
+        {% elif l == 'г' %}
+          {% include 'runner/letters/g.html' %}
+        {% elif l == 'д' %}
+          {% include 'runner/letters/d.html' %}
+        {% elif l == 'е' %}
+          {% include 'runner/letters/e.html' %}
+        {% elif l == 'ё' %}
+          {% include 'runner/letters/e.html' %}
+        {% elif l == 'ж' %}
+          {% include 'runner/letters/j.html' %}
+        {% elif l == 'з' %}
+          {% include 'runner/letters/z.html' %}
+        {% elif l == 'и' %}
+          {% include 'runner/letters/i.html' %}
+        {% elif l == 'й' %}
+          {% include 'runner/letters/i.html' %}
+        {% elif l == 'к' %}
+          {% include 'runner/letters/k.html' %}
+        {% elif l == 'л' %}
+          {% include 'runner/letters/l.html' %}
+        {% elif l == 'м' %}
+          {% include 'runner/letters/m.html' %}
+        {% elif l == 'н' %}
+          {% include 'runner/letters/n.html' %}
+        {% elif l == 'о' %}
+          {% include 'runner/letters/o.html' %}
+        {% elif l == 'п' %}
+          {% include 'runner/letters/p.html' %}
+        {% elif l == 'р' %}
+          {% include 'runner/letters/r.html' %}
+        {% elif l == 'с' %}
+          {% include 'runner/letters/c.html' %}
+        {% elif l == 'т' %}
+          {% include 'runner/letters/t.html' %}
+        {% elif l == 'у' %}
+          {% include 'runner/letters/u.html' %}
+        {% elif l == 'ф' %}
+          {% include 'runner/letters/f.html' %}
+        {% elif l == 'х' %}
+          {% include 'runner/letters/h.html' %}
+        {% elif l == 'ц' %}
+          {% include 'runner/letters/ts.html' %}
+        {% elif l == 'ч' %}
+          {% include 'runner/letters/ch.html' %}
+        {% elif l == 'ш' %}
+          {% include 'runner/letters/sh.html' %}
+        {% elif l == 'щ' %}
+          {% include 'runner/letters/sch.html' %}
+        {% elif l == 'ъ' %}
+          {% include 'runner/letters/strong.html' %}
+        {% elif l == 'ы' %}
+          {% include 'runner/letters/ii.html' %}
+        {% elif l == 'ь' %}
+          {% include 'runner/letters/soft.html' %}
+        {% elif l == 'э' %}
+          {% include 'runner/letters/ea.html' %}
+        {% elif l == 'ю' %}
+          {% include 'runner/letters/yu.html' %}
+        {% elif l == 'я' %}
+          {% include 'runner/letters/ya.html' %}
+        {% elif l == ' ' %}
+          {% include 'runner/letters/space.html' %}
+        {% elif l == '-' %}
+          {% include 'runner/letters/minus.html' %}
+        {% elif l == '+' %}
+          {% include 'runner/letters/plus.html' %}
+        {% elif l == '0' %}
+          {% include 'runner/numbers/0.html' %}
+        {% elif l == '1' %}
+          {% include 'runner/numbers/1.html' %}
+        {% elif l == '2' %}
+          {% include 'runner/numbers/2.html' %}
+        {% elif l == '3' %}
+          {% include 'runner/numbers/3.html' %}
+        {% elif l == '4' %}
+          {% include 'runner/numbers/4.html' %}
+        {% elif l == '5' %}
+          {% include 'runner/numbers/5.html' %}
+        {% elif l == '6' %}
+          {% include 'runner/numbers/6.html' %}
+        {% elif l == '7' %}
+          {% include 'runner/numbers/7.html' %}
+        {% elif l == '8' %}
+          {% include 'runner/numbers/8.html' %}
+        {% elif l == '9' %}
+          {% include 'runner/numbers/9.html' %}
+        {% endif %}
+      {% endfor %}
+      <div class="col">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+      <div class="col">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row" style="width: 200px; margin: auto;">
+      <div class="red change-color {% if color == 'red' %}change-color-active{% endif %}" data-color="red"></div>
+      <div class="blue change-color {% if color == 'blue' %}change-color-active{% endif %}" data-color="blue"></div>
+      <div class="green change-color {% if color == 'green' %}change-color-active{% endif %}" data-color="green"></div>
+      <div class="yellow change-color {% if color == 'yellow' %}change-color-active{% endif %}" data-color="yellow"></div>
+      <div class="purple change-color {% if color == 'purple' %}change-color-active{% endif %}" data-color="purple"></div>
+    </div>
+
+    <label for="text">мое оригинальное сообщение:</label>
+    <input id="text" type="text" name="text" placeholder="продам гараж" />
+
+    <a id="createMsg" href="/runner/create-msg/?msg=" class="btn">создать строку</a>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/static/runner/main.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('.pixel-active').each(function() {
+        $(this).addClass('{{color}}');
+      })
+    })
+    $('input').keyup(function() {
+      if ($('.pixel-active').hasClass('red')) {
+        var color = 'red'
+      } else if ($('.pixel-active').hasClass('blue')) {
+        var color = 'blue'
+      } else if ($('.pixel-active').hasClass('green')) {
+        var color = 'green'
+      } else if ($('.pixel-active').hasClass('yellow')) {
+        var color = 'yellow'
+      } else if ($('.pixel-active').hasClass('purple')) {
+        var color = 'purple'
+      }
+      $(this).val($(this).val().replace(/[^А-Яа-я0-9- ]/g, "").toLowerCase());
+      var v = '/runner/create-msg/?msg='+$(this).val()+'&color='+color;
+      $('#createMsg').attr('href', v);
+    })
+  </script>
+</body>
+</html>
