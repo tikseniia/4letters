@@ -79,7 +79,7 @@ function draw() {
         line(0, lineY, W, lineY);
         lineX = lineX + speed;
         lineY = lineY + speed;
-        if (lineX > width+40) {
+        if (lineX > width+200) {
           speed = -(speed);
           if (timeLeft) {
               animated = false;
@@ -226,9 +226,19 @@ const saveImg = () => {
       }
     }).done(function(data) {
         animated = false;
-        t = `Ура, с каждым днем все ближе друг к другу. Я тоже вижу у тебя это: ${join(data['data'], ',')}`;
-        c = 'rgb(113, 178, 128)';
+        if (data['data'].length > 0) {
+            t = `Ура, с каждым днем все ближе друг к другу. Я тоже вижу у тебя это: ${join(data['data'], ',')}`;
+            c = 'rgb(113, 178, 128)';
+        } else {
+            t = "Ой,\nничего не понятно.\nДавай еще раз.";
+            c = 'rgb(20, 30, 48)'
+        }
         timeLeft = false;
+
+        setTimeout(() => {
+            timeLeft = true;
+            background('#eeeeee');
+            }, 6000);
     });
 }
 
