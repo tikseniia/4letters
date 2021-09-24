@@ -6,6 +6,12 @@ body {
   background: rgba(0,0,0,.2) url('/static/back.jpg') 50% 40%;
   background-blend-mode: overlay;
   background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
 .runner-body {
   width: 100%;
