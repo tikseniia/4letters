@@ -30,7 +30,6 @@ def hello_world():
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
-    print(session['nums'])
     b64_string = request.form['img']
     encoded_data = b64_string.split(',', 1)[1]
     imgdata = base64.b64decode(encoded_data)
@@ -41,9 +40,6 @@ def upload_file():
 
     if len(pred['data']) == 0:
         return {"data": []}
-
-    print([char for char in session['nums']])
-    print(pred)
 
     return {"data": list(set(pred['data']).intersection([char for char in session['nums']]))}
 
