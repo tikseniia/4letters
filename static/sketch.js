@@ -146,8 +146,9 @@ const restartDrawing = () => {
             timeLeft = false;
 
             setTimeout(() => {
-            timeLeft = true;
-            background('#eeeeee');
+                timeLeft = true;
+                background('#eeeeee');
+                time = timeWeHave;
             }, 6000);
         } else {
             time -= 1;
@@ -243,6 +244,7 @@ const saveImg = () => {
         setTimeout(() => {
             timeLeft = true;
             background('#eeeeee');
+            time = timeWeHave;
             }, 6000);
     });
 }
