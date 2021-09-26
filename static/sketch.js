@@ -12,7 +12,7 @@ let timer;
 const timeWeHave = 15;
 let time = timeWeHave;
 let timeLeft = true;
-let t = "Ой,\nдалеко мы так не уедем.\nДавай-ка соберемся\nи поговорим уже нормально";
+let t = "Ой,\nдалеко мы так не уедем.\nДавай-ка соберемся еще раз";
 let c = 'rgb(20, 30, 48)'
 
 let animated = false;

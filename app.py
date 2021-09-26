@@ -63,7 +63,12 @@ def nums():
 
 @app.route('/check')
 def check():
-    return {"nums": session["nums"]}
+    if 'nums' in session:
+        nums = session['nums']
+    else:
+        nums = ''.join(random.choices(string.digits, k=4))
+        session['nums'] = nums
+    return {"nums": nums}
 
 
 if __name__ == '__main__':
