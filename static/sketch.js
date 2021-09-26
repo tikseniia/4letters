@@ -141,9 +141,14 @@ const restartDrawing = () => {
         if(time <= 0){
             window.clearInterval(timer);
             background('#eeeeee');
-            t = "Коллеги,\nдалеко мы так не уедем.\nДавайте-ка соберемся\nи сделаем уже нормально";
+            t = "Ой,\nдалеко мы так не уедем.\nДавайте попробуем еще раз";
             c = 'rgb(20, 30, 48)'
             timeLeft = false;
+
+            setTimeout(() => {
+            timeLeft = true;
+            background('#eeeeee');
+            }, 6000);
         } else {
             time -= 1;
             if (time < 10) {
